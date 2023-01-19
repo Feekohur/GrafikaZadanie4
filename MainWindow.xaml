@@ -1,0 +1,53 @@
+﻿<Window x:Class="GrafikaZadanie4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrafikaZadanie4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <ToolBar Grid.Row="0">
+                <Button Click="Button_Click">Załaduj plik</Button>
+            </ToolBar>
+            <Image Name="BitmapI" Grid.Row="1" Margin="5"></Image>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="7">R/Zmiana jasności:</TextBlock>
+                <TextBox Grid.Column="1" Margin="5" Name="RR" Text="0"></TextBox>
+                <TextBox Grid.Column="3" Margin="5" Name="GG" Text="0"></TextBox>
+                <TextBox Grid.Column="5" Margin="5" Name="BB" Text="0"></TextBox>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">G:</TextBlock>
+                <TextBlock Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">B:</TextBlock>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Column="1">
+            <Button Click="Button_Click_1">Dodawanie</Button>
+            <Button Click="Button_Click_2">Odejmowanie</Button>
+            <Button Click="Button_Click_3">Mnożenie</Button>
+            <Button Click="Button_Click_4">Dzielenie</Button>
+            <Button Click="Button_Click_5">Zwiększenie jasności</Button>
+            <Button Click="Button_Click_6">Zmniejszenie jasności</Button>
+            <Button Click="Button_Click_7">Skala szarości (kanał R)</Button>
+            <Button Click="Button_Click_8">Skala szarości (kanał G)</Button>
+            <Button Click="Button_Click_9">Filtr wygładzający</Button>
+        </StackPanel>
+    </Grid>
+</Window>
